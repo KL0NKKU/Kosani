@@ -101,14 +101,13 @@ const Navbar = ({
               <div className="d-flex align-items-center mb-5">
                 <i className="uil uil-envelope fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-16 text-center m-0">
-                  <a href="mailto:buildify@gmail.com">buildify@gmail.com</a>
+                  <a href="mailto:tomi.kosani@gmail.com">tomi.kosani@gmail.com</a>
                 </p>
               </div>
               <div className="d-flex mb-5">
                 <i className="uil uil-phone-volume fs-32 text-main bg-white rounded-circle me-2" />
                 <p className="fs-18 text-center m-0 d-flex flex-column">
-                  <a href="tel:+919876543210">+91 98765 43210</a>
-                  <a href="tel:+911234567890">+91 12345 67890</a>
+                  <a href="tel:+358405589933">+358 40 5589933</a>
                 </p>
               </div>
               <SocialLinks />

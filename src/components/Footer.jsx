@@ -69,8 +69,8 @@ const Footer = () => {
               {/* Email */}
               <div className="d-flex mb-3 align-items-center">
                 <i className="uil uil-envelope fs-26 text-main" />
-                <a href="mailto:buildify@gmail.com" className="link-body ms-2 roboto">
-                  info@kosani.fi
+                <a href="mailto:tomi.kosani@gmail.com" className="link-body ms-2 roboto">
+                  tomi.kosani@gmail.com
                 </a>
               </div>
 

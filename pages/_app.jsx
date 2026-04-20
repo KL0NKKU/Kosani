@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { Fragment, useEffect, useState } from 'react';
 import ThemeProvider from 'theme/ThemeProvider';
 import Layout from 'components/Layout';
+import { Analytics } from '@vercel/analytics/react';
 
 // Import global styles and third-party CSS
 import 'animate.css';
@@ -40,47 +41,63 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Fragment>
-        <Head>
-          {/* Basic meta tags */}
-          <meta charSet="utf-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <Head>
+        {/* Basic meta tags */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-          {/* TODO: Replace 'Location' and 'Construction' with your actual business info */}
-          <title>Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies</title>
-          <meta
-            name="description"
-            content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
-          />
+        {/* TODO: Replace 'Location' and 'Construction' with your actual business info */}
+        <title>Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies</title>
+        <meta
+          name="description"
+          content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
+        />
 
-          {/* Open Graph tags for social sharing */}
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content="Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies" />
-          <meta
-            property="og:description"
-            content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
-          />
-          {/* TODO: Replace with your actual website URL */}
-          <meta property="og:url" content="https://themixly.com/preview/192/construction-company-react-nextjs-template" />
-          {/* TODO: Replace with your actual image URL */}
-          <meta property="og:image" content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png" />
-          <meta property="og:image:secure_url" content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png" />
+        {/* Open Graph tags for social sharing */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies"
+        />
+        <meta
+          property="og:description"
+          content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
+        />
+        {/* TODO: Replace with your actual website URL */}
+        <meta property="og:url" content="https://themixly.com/preview/192/construction-company-react-nextjs-template" />
+        {/* TODO: Replace with your actual image URL */}
+        <meta
+          property="og:image"
+          content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png"
+        />
+        <meta
+          property="og:image:secure_url"
+          content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png"
+        />
 
-          {/* Twitter Card tags */}
-          <meta name="twitter:card" content="summary" />
-          <meta name="twitter:title" content="Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies" />
-          <meta
-            name="twitter:description"
-            content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
-          />
-          {/* TODO: Replace with your actual image URL */}
-          <meta name="twitter:image" content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png" />
-        </Head>
-        <Layout>
-          <ThemeProvider>
-            {/* Show loader while app is loading */}
-            {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
-          </ThemeProvider>
-        </Layout>
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary" />
+        <meta
+          name="twitter:title"
+          content="Buildify – Free Next.js Website Template for Contractors, Builders & Construction Companies"
+        />
+        <meta
+          name="twitter:description"
+          content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
+        />
+        {/* TODO: Replace with your actual image URL */}
+        <meta
+          name="twitter:image"
+          content="https://themixly.com/wp-content/uploads/2025/06/Buildify-Product-Detail-1-scaled.png"
+        />
+      </Head>
+      <Layout>
+        <ThemeProvider>
+          {/* Show loader while app is loading */}
+          {loading ? <div className="page-loader" /> : <Component {...pageProps} />}
+        </ThemeProvider>
+        <Analytics />
+      </Layout>
     </Fragment>
   );
 }

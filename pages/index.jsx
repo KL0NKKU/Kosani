@@ -9,25 +9,63 @@ import WhyChoose from 'components/WhyChoose';
 import Contact from 'components/Contact';
 
 const Home = () => {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Kosani Oy',
+    url: 'https://www.kosani.fi/',
+    email: 'tomi.kosani@gmail.com',
+    telephone: '+358405589933',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Ojantaustantie 15',
+      postalCode: '05400',
+      addressLocality: 'Hyvinkää',
+      addressCountry: 'FI'
+    },
+    areaServed: ['Hyvinkää', 'Lähialueet'],
+    description:
+      'Kosani Oy tarjoaa LVI-asennukset, saneeraukset, uudiskohteet sekä huollot ja korjaukset Hyvinkäällä ja lähialueilla.'
+  };
+
   return (
     <Fragment>
-      {/* Page loading progress bar */}
       <PageProgress />
 
-      {/* Meta Information */}
       <Head>
-        <title>Kosani Oy</title>
+        <title>LVI-palvelut Hyvinkäällä | Kosani Oy</title>
         <meta
           name="description"
-          content="Free Next.js website template for builders, contractors & construction firms – built with Bootstrap"
+          content="Kosani Oy tarjoaa LVI-asennukset, saneeraukset, uudiskohteet sekä huollot ja korjaukset Hyvinkäällä ja lähialueilla."
         />
+        <meta name="robots" content="index,follow" />
+        <link rel="canonical" href="https://www.kosani.fi/" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="fi_FI" />
+        <meta property="og:site_name" content="Kosani Oy" />
+        <meta property="og:title" content="LVI-palvelut Hyvinkäällä | Kosani Oy" />
+        <meta
+          property="og:description"
+          content="Kosani Oy tarjoaa LVI-asennukset, saneeraukset, uudiskohteet sekä huollot ja korjaukset Hyvinkäällä ja lähialueilla."
+        />
+        <meta property="og:url" content="https://www.kosani.fi/" />
+        <meta property="og:image" content="https://www.kosani.fi/img/logo.webp" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="LVI-palvelut Hyvinkäällä | Kosani Oy" />
+        <meta
+          name="twitter:description"
+          content="Kosani Oy tarjoaa LVI-asennukset, saneeraukset, uudiskohteet sekä huollot ja korjaukset Hyvinkäällä ja lähialueilla."
+        />
+        <meta name="twitter:image" content="https://www.kosani.fi/img/logo.webp" />
+
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Head>
 
       <main className="content-wrapper overflow-hidden">
-        {/* Hero Section */}
         <Hero />
 
-        {/* About Section */}
         <section id="tietoa-meista" className="wrapper">
           <div className="container py-12 py-md-14">
             <About
@@ -41,12 +79,12 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
         <section id="palvelut" className="wrapper whychoose-bg">
           <div className="container py-14 py-md-16">
             <WhyChoose />
           </div>
         </section>
+
         <Contact />
       </main>
     </Fragment>

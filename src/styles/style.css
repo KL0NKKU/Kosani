@@ -133,8 +133,7 @@ h2 span {
 /* Footer background */
 .footer-bg {
   background:
-    url('/img/bg-3.svg') no-repeat bottom left,
-    #edf3ff;
+   /* url('/img/bg-3.svg') no-repeat bottom left,*/ #edf3ff;
 }
 
 /* Background styles */
@@ -147,7 +146,7 @@ h2 span {
   padding: 15px;
 }
 .whychoose-bg {
-  background-image: url('/img/bg-1.svg');
+  /*background-image: url('/img/bg-1.svg');*/
   background-position: bottom right;
   background-repeat: no-repeat;
 }

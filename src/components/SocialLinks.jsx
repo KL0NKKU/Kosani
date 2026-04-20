@@ -1,15 +1,15 @@
 // Array of social link objects containing id, icon class, and URL
 const links = [
-  {
-    id: 1,
-    icon: 'uil uil-facebook-f',
-    url: 'https://www.facebook.com/'
-  },
-  {
-    id: 2,
-    icon: 'uil uil-linkedin',
-    url: 'https://www.linkedin.com/'
-  }
+  //{
+  // id: 1,
+  //   icon: 'uil uil-facebook-f',
+  //  url: 'https://www.facebook.com/'
+  // },
+  // {
+  // id: 2,
+  // icon: 'uil uil-linkedin',
+  //  url: 'https://www.linkedin.com/'
+  // }
 ];
 
 /**
